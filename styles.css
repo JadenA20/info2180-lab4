@@ -3,8 +3,8 @@
   flex-direction: row;
   background-color: #C7C7C7;
   justify-content: center;
-  margin-right: 50px;
-  margin-left: 50px;
+  padding: 20px;
+  height: auto;
 }
 
 #search {
