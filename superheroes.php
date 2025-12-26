@@ -66,13 +66,14 @@ $superheroes = [
 ?>
 
 <?php
-
+//Sanitisation of user input
 $query = filter_input(INPUT_GET, 'query', FILTER_SANITIZE_STRING);
 $heroList = [];
 
 ?>
 
 <?php
+//To make case-insensitive
 $query = strtolower($query);
 
 foreach($superheroes as $superhero){
@@ -95,10 +96,20 @@ if($query){
             </div>";   
         }
     } 
-
+      
+   //If not found
    elseif($heroList === []){
         echo "<h5> SUPERHERO NOT FOUND </h5>";
     }
+
+  //Returns all
+  else{
+    echo "<ul>";
+    foreach($superheroes as $superhero){
+        echo "<li>{$superhero['alias']}</li>";
+    }
+    echo "</ul>";
+    
 }
 ?>
 
