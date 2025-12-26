@@ -109,7 +109,8 @@ if($query){
         echo "<li>{$superhero['alias']}</li>";
     }
     echo "</ul>";
-    
+  }
+  
 }
 ?>
 
