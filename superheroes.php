@@ -85,7 +85,7 @@ foreach($superheroes as $superhero){
 ?>
 
 <?php
-if($query){
+if(!empty($query)){
   
     //Returns hero
     if($heroList !== []){
@@ -104,16 +104,18 @@ if($query){
         echo "<h5> SUPERHERO NOT FOUND </h5>";
     }
 
-  //Returns all
-  else{
+  }
+
+ //Returns all
+  else {
     echo "<ul>";
     foreach($superheroes as $superhero){
         echo "<li>{$superhero['alias']}</li>";
     }
     echo "</ul>";
-  }
-  
+    
 }
+
 ?>
 
 
