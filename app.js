@@ -26,4 +26,4 @@ document.addEventListener("DOMContentLoaded", function(){
   };
 
  searchButton.addEventListener('click', superheroList);
-)};
+});
