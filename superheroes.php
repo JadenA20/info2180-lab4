@@ -65,8 +65,36 @@ $superheroes = [
 
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+<?php
+
+$query = filter_input(INPUT_GET, 'query', FILTER_SANITIZE_STRING);
+$heroList = [];
+
+?>
+
+<?php
+$query = strtolower($query);
+
+foreach($superheroes as $superhero){
+    if(strtolower($superhero['name'])  === $query || strtolower($superhero['alias']) === $query){
+        $heroList[] = $superhero;
+    }
+}
+
+?>
+
+<?php
+if($query){
+    if($heroList !== []){
+        foreach($heroList as $hero){
+            $heroName = strtoupper($hero['name']);
+            echo "<div>
+            <h3>{$hero['alias']}</h3>
+            <h4>A.K.A {$heroName}</h4>
+            <p>{$hero['biography']}</p>
+            </div>";   
+      }
+  }
+?>
+
+
