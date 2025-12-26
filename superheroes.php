@@ -1,7 +1,5 @@
 <?php
 
-var_dump($_GET);
-
 $superheroes = [
   [
       "id" => 1,
@@ -72,6 +70,7 @@ $superheroes = [
 $query = filter_input(INPUT_GET, 'query', FILTER_SANITIZE_STRING);
 $heroList = [];
 
+var_dump($query);
 ?>
 
 <?php
