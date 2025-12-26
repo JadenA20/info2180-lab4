@@ -93,8 +93,9 @@ if($query){
             <h4>A.K.A {$heroName}</h4>
             <p>{$hero['biography']}</p>
             </div>";   
-      }
-  }
+        }
+    } 
+}
 ?>
 
 
