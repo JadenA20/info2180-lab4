@@ -95,6 +95,10 @@ if($query){
             </div>";   
         }
     } 
+
+   elseif($herosList === []){
+        echo "<h5> SUPERHERO NOT FOUND </h5>";
+    }
 }
 ?>
 
