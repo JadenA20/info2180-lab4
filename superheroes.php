@@ -86,7 +86,9 @@ foreach($superheroes as $superhero){
 
 <?php
 if($query){
-    if($heroList !== []){
+  
+    //Returns hero
+    if(is_array($heroList)) && !empty($heroList)){
         foreach($heroList as $hero){
             $heroName = strtoupper($hero['name']);
             echo "<div>
