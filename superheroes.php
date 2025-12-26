@@ -96,7 +96,7 @@ if($query){
         }
     } 
 
-   elseif($herosList === []){
+   elseif($heroList === []){
         echo "<h5> SUPERHERO NOT FOUND </h5>";
     }
 }
