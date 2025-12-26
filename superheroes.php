@@ -67,10 +67,11 @@ $superheroes = [
 
 <?php
 //Sanitisation of user input
-$query = filter_input(INPUT_GET, 'query', FILTER_SANITIZE_STRING);
+$query = $_GET['query'] ?? null; 
+$query = trim($query); 
+$query = htmlspecialchars($query, ENT_QUOTES, 'UTF-8');
 $heroList = [];
 
-var_dump($query);
 ?>
 
 <?php
