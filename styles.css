@@ -1,25 +1,36 @@
+.lookup {
+  display: flex;
+  flex-direction: row;
+  background-color: #C7C7C7;
+}
+
 #search {
   font-family: "Times New Roman";
   background-color: #C2C2C2;
   font-size: 20px;
   border-radius: 7px;
-  border-color: ##4D4D4D;
+  border-color: #4D4D4D;
 }
 
 
 #button {
   font-family: "Times New Roman";
   color: white;
-  background-color: ##694191;
+  background-color: #694191;
   font-size: 20px;
   border-radius: 7px;
-  border-color: ##4D4D4D;
+  border-color: #4D4D4D;
+}
+
+#result {
+  font-family: "Times New Roman";
+  text-align: center;
 }
 
 header {
   background-color: #72C2B2;
   color: black;
-  width: 50px;
+  height: 70px;
   text-align: center;
 }
 
