@@ -25,7 +25,9 @@ document.addEventListener("DOMContentLoaded", function(){
     userRequest.send()
   };
 
- searchButton.addEventListener('click', function(e)){
+ searchButton.addEventListener('click', function(e){
   e.preventDefault();
   superheroList();
+ });
+                               
 });
